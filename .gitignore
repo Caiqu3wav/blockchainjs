@@ -1,0 +1,40 @@
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar diretórios de dependências
+node_modules/
+vendor/
+
+# Ignorar arquivos de compilação
+dist/
+build/
+
+# Ignorar arquivos de configuração do IDE
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
+*.bak
+
+# Ignorar arquivos de ambientes virtuais (Python)
+env/
+venv/
+__pycache__/
+
+# Ignorar arquivos de cache
+.cache/
+
+# Ignorar arquivos de banco de dados
+*.sqlite3
+*.db
+
+# Ignorar arquivos de configuração de testes
+coverage/
+*.cover
