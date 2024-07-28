@@ -19,4 +19,23 @@ class CryptoBlock {
             this.nonce
         ).toString();
     }
+
+    proofOfWork(difficulty) {
+        while(
+            this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")
+        ) {
+            this.nonce++;
+            this.hash = this.computeHash();
+        }
+    }
+}
+
+class CryptoBlockchain {
+    constructor() {
+        this.blockchain = [this.startGenesisBlock()]
+        this.difficulty = 4;
+    }
+    startGenesisBlock() {
+        return new CryptoBlock(0, "01/01/2020", "Initial Block in the Chain", "0");
+    }
 }
