@@ -63,3 +63,17 @@ class CryptoBlockchain {
         return true;
     }
 }
+
+let blockchainCoder = new CryptoBlockchain();
+
+console.log("blockchainCoder mining....");
+
+blockchainCoder.addNewBlock(
+    new CryptoBlock(1, "01/08/2021", {
+        sender: "Caiquinho",
+        recipient: "João",
+        quantity: 800,
+    })
+);
+
+console.log(JSON.stringify(blockchainCoder, null, 4));
